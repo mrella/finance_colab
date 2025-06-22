@@ -1,1 +1,1 @@
-# finance_colab
+# financemr
