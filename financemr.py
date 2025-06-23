@@ -17,8 +17,6 @@ markov.generar_graficos(path_markov)
 t.send_img(path_markov+"markov_return.png",caption="Hidden Markov Returns Analysis")
 t.send_img(path_markov+"markov_atr.png",caption="Hidden Markov ATR Analysis")
 
-exit()
-
 #### LPPL SOBRECOMPRA Y SOBREVENTA
 path_lppl = path_base + "lppl/"
 os.makedirs(path_lppl, exist_ok=True)
