@@ -17,7 +17,7 @@ warnings.filterwarnings('ignore')
 # 1. Descargar datos históricos del S&P 500 usando yfinance
 def descargar_datos(ticker='^GSPC', periodo='5y', interval="1d"):
     data = yf.download(ticker, period=periodo, progress=False, interval=interval)
-    print(data)
+    
     return data
 
 # 2. Calcular volatilidad: True Range y Average True Range (ATR)

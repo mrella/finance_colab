@@ -36,7 +36,6 @@ for ticker in ['SPY','QQQ']:
     t.send_img(f"{path_tickers}{ticker}_markov_atr.png",caption=f"Hidden MARKOV ATR Analysis {ticker}")
 t.send("Explicación MARKOV: https://chatgpt.com/share/6859c35f-9130-8002-8cff-f15e677bd165)")
 
-exit()
 
 #### LPPL SOBRECOMPRA Y SOBREVENTA
 print("LPPL .................................................................")
