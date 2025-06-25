@@ -17,7 +17,7 @@ def detect_crossover(data, fast_ma, slow_ma):
 
 def get_cruces(tickers):
   
-  fecha_fin = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
+  fecha_fin = (datetime.now() - timedelta(days=80)).strftime("%Y-%m-%d")
   #data = yf.download(tickers, start=fecha_fin).dropna(axis=1)
   #data.index = pd.to_datetime(data.index)
 
