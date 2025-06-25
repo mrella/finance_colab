@@ -53,6 +53,7 @@ def drawdown_medio_tickers_img(tickers, fecha_inicio, fecha_fin, titulo, indice,
   plt.xticks([], [])  # Ocultar los nombres de los tickers en el eje x
   plt.legend()
   plt.savefig(path)
+  plt.close()  # Cerrar la figura para liberar memoria
 
 
 def generar_graficos(path):
@@ -149,7 +150,7 @@ def drawdown_medio_tickers_video(tickers, fecha_inicio, fecha_fin, titulo, indic
 
       # Crear subgráfico 2: Precio del SPY
       ax2 = fig.add_subplot(2, 1, 2)
-      ax2.plot(up_to_date.index, up_to_date.values, color='blue', label='Price')
+      ax2.plot(up_to_date.index, up_to_date.values, color='cyan', label='Price')
       ax2.set_title('Price Evolution')
       ax2.set_ylabel('Price ($)')
       ax2.set_xlabel('Date')
@@ -158,13 +159,14 @@ def drawdown_medio_tickers_video(tickers, fecha_inicio, fecha_fin, titulo, indic
 
   # Crear la figura para la animación
   fig = plt.figure(figsize=(12, 10))
-
+  
   # Crear la animación
   ani = FuncAnimation(fig, update, frames=len(drawdowns_history), repeat=False)
 
   # Guardar como video
   print(f"Generando animación {titulo} ...")
   ani.save(path, writer='ffmpeg', fps=3)
+  plt.close(fig)  # Cerrar la figura para liberar memoria
   print(f"Animación {titulo} completada...")
 
 

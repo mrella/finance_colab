@@ -90,6 +90,7 @@ def generar_graficos(path):
     plt2.yticks(fontsize=8)
     plt2.xticks(fontsize=8)
     plt2.savefig(path + 'best_stocks.png')
+    plt2.close()
 
 
 #generar_graficos("C:/users/mrella/OneDrive - Consorci Administració Oberta de Catalunya/Inversion/FinanceMR/best_stocks/best_stocks.png")
